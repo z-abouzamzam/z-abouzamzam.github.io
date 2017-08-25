@@ -76,7 +76,7 @@ function documentMouseUpHandler(event) {
 
 function documentTouchStartHandler(event) {
 	if(event.touches.length == 1) {
-		event.preventDefault();
+		// event.preventDefault();
 
 		mouseX = event.touches[0].pageX - (window.innerWidth - SCREEN_WIDTH) * .5;;
 		mouseY = event.touches[0].pageY - (window.innerHeight - SCREEN_HEIGHT) * .5;
@@ -85,7 +85,7 @@ function documentTouchStartHandler(event) {
 
 function documentTouchMoveHandler(event) {
 	if(event.touches.length == 1) {
-		event.preventDefault();
+		// event.preventDefault();
 
 		mouseX = event.touches[0].pageX - (window.innerWidth - SCREEN_WIDTH) * .5;;
 		mouseY = event.touches[0].pageY - (window.innerHeight - SCREEN_HEIGHT) * .5;
