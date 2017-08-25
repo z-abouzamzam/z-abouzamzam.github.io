@@ -1,2 +1,2 @@
-# z-abouzamzam.github.io
-# Website by Zafir Abou-Zamzam
+# Personal Website
+**Check it out at** http://zafir.me
