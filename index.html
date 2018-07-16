@@ -12,16 +12,17 @@
     <title>Zafir</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/portfolio.css" rel="stylesheet">
     <link rel="shortcut icon" href="img/icon.png">
 
-    
+
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,31 +34,36 @@
 </head>
 
 <body>
+    <canvas id = "world" style= "position: absolute; background-color: #FFFFFF" ></canvas>
+
+    <script src="js/index.js"></script>
 
     <!-- Header -->
-    <header id="top" class="header" style="position: relative; background:#000000">
-        <canvas id = "world" style= "position: absolute"></canvas>
-        <script src="js/index.js"></script>
+    <header id="top" class="header" style="position: relative">
+    <!-- data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-out"> -->
+
+
         <div class="text-vertical-center" style="position:relative">
+
             <div class = "center">
                 <div class = "face">
                     <!--<img src = "img/me.jpg" ></img>-->
+
                 </div>
             </div>
-            <h2 style="color:#BBBBBB; margin-top: 3%">I am</h2>
+            <!-- <h2 style="color:#BBBBBB; margin-top: 3%">I am</h2> -->
             <h1 style="color:#FFFFFF">Zafir Abou-Zamzam</h1>
             <br>
-            <p class="lead" style="color:#BBBBBB">Caltech | Computer Science</p>
+            <p class="lead" style="color:#FFFFFF">Caltech | Computer Science</p>
             <!-- <a href="#about" class="btn btn-dark btn-lg">About Me</a> -->
-            <hr class="small">
 
-            <div class="row text-center">
+            <div class="row text-center" style="margin-top: 0%">
 
                 <div class="service-item" style="display: inline-block">
-                    <a href="https://github.com/z-abouzamzam">
+                    <a href="https://github.com/z-abouzamzam" target="_blank">
                     <span class="fa-stack fa-4x">
-                    <!--<i class="fa fa-circle fa-stack-2x"></i>-->
-                    <i class="fa fa-github fa-stack-1x fa-inverse text-primary"></i>
+                    <!-- <i class="fal fa-circle fa-stack-2x"></i> -->
+                    <i class="fab fa-github-alt fa-inverse"></i>
                     </span>
                     </a>
                     <!-- <a href="https://github.com/z-abouzamzam" style="color:#FFFFFF">
@@ -68,10 +74,24 @@
 
                 </div>
                 <div class="service-item" style="display: inline-block">
-                    <a href="https://itunes.apple.com/us/developer/zafir-abou-zamzam/id1149038612">
+                    <a href="https://itunes.apple.com/us/developer/zafir-abou-zamzam/id1149038612" target="_blank">
                     <span class="fa-stack fa-4x">
                     <!--<i class="fa fa-circle fa-stack-2x"></i>-->
-                    <i class="fa fa-mobile fa-stack-1x fa-inverse text-primary"></i>
+                    <i class="fa fa-mobile-alt fa-inverse "></i>
+                    </span>
+                    </a>
+                    <!-- <a href="#portfolio" style="color:#FFFFFF">
+                    <h4><strong>Apps</strong></h4>
+                    </a>
+
+                    <a href="https://itunes.apple.com/us/developer/zafir-abou-zamzam/id1149038612" class="btn btn-light">Apps</a>
+                    </a> -->
+                </div>
+
+                <div class="service-item" style="display: inline-block">
+                    <a href="https://www.linkedin.com/in/zafir-a-21b03a118/" target="_blank">
+                    <span class="fa-stack fa-4x">
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse text-primary"></i>
                     </span>
                     </a>
                     <!-- <a href="#portfolio" style="color:#FFFFFF">
@@ -83,12 +103,157 @@
                 </div>
 
 
-                    </div>
                 </div>
+
+                </div>
+                <!-- <hr style="color: #000000; width: 90%; position: relative"></hr> -->
+
+
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- <a href="#portfolio">
+    <img class="down" src="img/down.png" style="position: relative; margin-top: -10%; margin-left: 43%; width: 200px"></img>
+</a> -->
+
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+
+                    <h1 class="subheader">My Work</h1><br>
+                    <p style="color: #FFFFFF; font-size: 16px; font-weight: 300;">Just a handful of my apps and projects.</p>
+                    <hr class="small">
+                    <br>
+                    <div class="row">
+                      <div class="col-sm-6">
+                          <div class="portfolio-item">
+                              <a href="https://github.com/z-abouzamzam/DB123" target="_blank">
+                                  <img class="img-portfolio img-responsive" src="img/db123.png">
+                                </a>
+                                <div class="portfolio-text">
+                                <h3 style="text-align: left">DB123</h3>
+                                <p>A document oriented database system built entirely from scratch
+                                   in Python 3. This project includes SQL like syntax for commands,
+                                   and functionality including CRUD operations. </p>
+
+                                <a href="https://github.com/z-abouzamzam/DB123" target="_blank" class="darklink">
+                                    Check it out on Github</a>
+                                </div>
+                          </div>
+                      </div>
+
+                      <div class="col-sm-6">
+                          <div class="portfolio-item">
+                               <a href="https://github.com/z-abouzamzam/ShakespeareSonnetGeneration" target="_blank">
+                                  <img class="img-portfolio img-responsive" src="img/shake.png">
+                              </a>
+                              <div class="portfolio-text">
+                              <h3>Shakespearian Sonnet Generator</h3>
+                              <p>A machine learning project that generates sonnets
+                                 of Shakespearian form. In this project, I use hidden
+                                 markov models and deep neural networks to generate
+                                 poems.</p>
+
+                              <a href="https://github.com/z-abouzamzam/ShakespeareSonnetGeneration" target="_blank" class="darklink">
+                                  See the project on Github</a>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="col-sm-6">
+                          <div class="portfolio-item">
+                              <a href="https://itunes.apple.com/us/app/drop-the-game/id1053723428?mt=8" target="_blank">
+                                  <img class="img-portfolio img-responsive" src="img/drop.png">
+                              </a>
+                              <div class="portfolio-text">
+                              <h3>Drop - The Game</h3>
+                              <p>A simple arcade game for built for iPhone and iPad.
+                                  Gameplay starts out slow, but progressively gets more difficult.
+                              </p>
+
+                              <a href="https://itunes.apple.com/us/app/drop-the-game/id1053723428?mt=8" target="_blank" class="darklink">
+                                  Free on the App Store</a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                          <div class="portfolio-item">
+                              <a href="https://itunes.apple.com/us/app/boxfour/id1049624633?mt=8" target="_blank">
+                                  <img class="img-portfolio img-responsive" src="img/Box.png">
+                              </a>
+                              <div class="portfolio-text">
+                              <h3>BoxFour</h3>
+                              <p>A "Simon Says" style memory game, built to test memorization
+                                  of certain patterns. In each level a pattern that the player
+                                  must mimic will light up
+                              </p>
+
+                              <a href="https://itunes.apple.com/us/app/boxfour/id1049624633?mt=8" target="_blank" class="darklink">
+                                  Free on the App Store</a>
+                               </div></div>
+                      </div>
+
+                        <div class="col-sm-6">
+                            <div class="portfolio-item">
+                                <a href="https://itunes.apple.com/us/app/crazy-driver/id639359331?mt=8" target="_blank">
+                                    <img class="img-portfolio img-responsive" src="img/craz1.png">
+                                </a>
+                                <div class="portfolio-text">
+                                <h3>Crazy Driver</h3>
+                                <p>An arcade racing game designed for iPhone. Features
+                                    customizable controls and cars, original
+                                    music, and a global high score table.
+                                </p>
+
+                                <a href="https://itunes.apple.com/us/app/crazy-driver/id639359331?mt=8" target="_blank" class="darklink">
+                                    Download it on the App Store</a>
+                            </div></div>
+                        </div>
+
+
+                        <!-- just add more of these divs when the time comes
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="img/craz.png">
+                                </a>
+                            </div>
+                        </div>
+                        -->
+                    </div>
+                    <!-- /.row (nested) -->
+                    <!-- <a href="http://challengepost.com/zafir?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav" class="btn btn-dark">See More</a> -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="col-lg-10 col-lg-offset-1 text-left">
+            <h1>About Me</h1>
+            <p style="font-size: 15px; font-weight: 300; margin-top: 2%; margin-bottom: 2%">
+                I'm currently a third year Computer Science student at Caltech. I like
+                working on projects when I have free time, and I enjoy iOS app development.
+                Feel free to reach out to me
+            <a href='mailto:zafir@caltech.edu' target="_blank" class="darklink">here</a> or through <a href='https://www.linkedin.com/in/zafir-a-21b03a118' target="_blank" class="darklink">Linkedin</a>,
+             and I can send a resume if requested.</p>
+
             </div>
 
         </div>
-    </header>
+    </section>
 
 
 </body>

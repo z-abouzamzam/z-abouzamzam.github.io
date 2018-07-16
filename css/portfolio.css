@@ -12,14 +12,14 @@ body {
     height: 100%;
     max-width: 100%;
     overflow-x: hidden;
-    overflow-y: scroll;
+    // overflow-y: scroll;
 }
 
 body {
     font-family: "Trebuchet MS","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 canvas {
-  background-color: #000000;
+  background-color: #FFFFFF;
   padding: 0;
   margin: 0;
   overflow: hidden;
@@ -72,11 +72,23 @@ canvas {
 .lead {
     color: #333333;
     margin-top: 0px;
+
 }
 /* Custom Horizontal Rule */
 
 hr.small {
     max-width: 200px;
+}
+
+hr.long {
+    max-width: 1000px;
+}
+
+#down
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Side Menu */
@@ -170,30 +182,55 @@ hr.small {
     display: table;
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 75%;
     // background: url(../img/blur.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    padding: 2% 0;
+    background-color: rgba(0,138,189,.8);
+    // background-color: rgba(67,133,156, .5);
 }
 
+.subheader {
+    font-size: 50px;
+    color: #FFFFFF;
+    margin-top: 5%;
+}
+
+
+.fa { transition: all .3s ease-in-out; }
+
+.fa:hover {
+    transform: scale(1.2);
+    color: #EEEEEE;
+}
+
+.fab { transition: all .3s ease-in-out; }
+
+.fab:hover {
+    transform: scale(1.2);
+    color: #EEEEEE;
+}
 .face {
-    width: 250px;
-    height: 250px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    -ms-border-radius: 20%;
+    -o-border-radius: 20%;
+    border-radius: 30% 30% 30% 30%;
     border: solid;
     border-width: 6px;
-    border-color: #BBBBBB;
+    border-color: #EEEEEE;
     vertical-align: horizontal-center;
     background: url(../img/profile.jpg) no-repeat center center scroll;
     background-size: contain;
     margin: 2% auto;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+
 }
 
 .face img {
@@ -209,6 +246,10 @@ hr.small {
 
 .about {
     padding: 50px 0;
+    background: rgba(255, 255, 255, 1.0);
+    width: 100%;
+    position: relative;
+    height: 30%;
 }
 
 /* Services */
@@ -235,19 +276,42 @@ hr.small {
     -o-background-size: cover;
 }
 
+.darklink
+{
+    font-weight: bold;
+    color: #222222;
+}
+
 /* Portfolio */
 
 .portfolio {
-    padding: 50px 0;
+    padding: 0 0;
+
 }
 
 .portfolio-item {
     margin-bottom: 30px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    min-height: 400px;
+    // max-width: 540px;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
-
+.portfolio-text {
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
 .img-portfolio {
     margin: 0 auto;
     overflow: hidden;
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+    padding-left: -10px;
+    padding-right: -10px;
 }
 
 .img-portfolio:hover {

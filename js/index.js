@@ -19,12 +19,16 @@ var mouseX = SCREEN_WIDTH * 0.5;
 var mouseY = SCREEN_HEIGHT * 0.5;
 var mouseIsDown = false;
 
-function init() {
+// var grad;
 
+
+function init() {
   canvas = document.getElementById( 'world' );
+  // canvas.fillColor = '#FFFFFF';
 
   if (canvas && canvas.getContext) {
 		context = canvas.getContext('2d');
+        context.canvas.height *= 2;
 
 		// Register event listeners
 		window.addEventListener('mousemove', documentMouseMoveHandler, false);
@@ -37,6 +41,16 @@ function init() {
         createParticles();
 
 		windowResizeHandler();
+        // context.fillRect(0, 0, context.canvas.width, 2 * context.canvas.height);
+
+        // grad = context.createLinearGradient(0,0,0,context.canvas.height);
+        // grad.addColorStop(0, 'rgba(0,138,189,0.75)');
+        // grad.addColorStop(0, 'rgba(158,231,242, .75)');
+        // grad.addColorStop(0, 'rgba(200,200,200, .75)');
+        // grad.addColorStop(1, 'rgba(200,200,200, .75)');
+
+        // grad.addColorStop(1,'rgba(253,239,217, .75)');
+        context.fillStyle = 'rgba(200,200,200, .75)';
 
 		setInterval( loop, 1000 / 60 );
 	}
@@ -51,7 +65,7 @@ function createParticles() {
 			position: { x: mouseX, y: mouseY },
 			offset: { x: 0, y: 0 },
 			shift: { x: mouseX, y: mouseY },
-			speed: 0.01+Math.random()*0.04,
+			speed: 0.01+Math.random()*0.035,
 			targetSize: 1,
 			fillColor: '#' + (Math.random() * 0x404040 + 0xaaaaaa | 0).toString(16),
 			orbit: RADIUS*.5 + (RADIUS * .5 * Math.random())
@@ -113,8 +127,11 @@ function loop() {
 
 	RADIUS_SCALE = Math.min( RADIUS_SCALE, RADIUS_SCALE_MAX );
 
-	context.fillStyle = '#0c131b';
-		 context.fillRect(0, 0, context.canvas.width, context.canvas.height);
+    // context.fillStyle = '#FF1030';
+
+    context.fillStyle = 'rgba(200,200,200, .75)';
+    // context.fillStyle = grad;
+    context.fillRect(0, 0, context.canvas.width, context.canvas.height);
 
 	for (i = 0, len = particles.length; i < len; i++) {
 		var particle = particles[i];
@@ -143,16 +160,17 @@ function loop() {
 			particle.targetSize = 1 + Math.random() * 7;
 		}
 
-		context.beginPath();
-		context.fillStyle = particle.fillColor;
-		context.strokeStyle = particle.fillColor;
-		context.lineWidth = particle.size;
-		context.moveTo(lp.x, lp.y);
-		context.lineTo(particle.position.x, particle.position.y);
-		context.stroke();
-		context.arc(particle.position.x, particle.position.y, particle.size/2, 0, Math.PI*2, true);
-		context.fill();
+        context.beginPath();
+        context.fillStyle = particle.fillColor;
+        context.strokeStyle = particle.fillColor;
+        context.lineWidth = particle.size;
+        context.moveTo(lp.x, lp.y);
+        context.lineTo(particle.position.x, particle.position.y);
+        context.stroke();
+        // context.arc(particle.position.x, particle.position.y, particle.size/2, 0, Math.PI*2, true);
+        context.fill();
 	}
+
 }
 
 window.onload = init;
